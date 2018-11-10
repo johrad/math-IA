@@ -3,4 +3,4 @@ Backup for my Mathematics IA, if IBO somehow finds this private repo and deems i
 
 Check this cute doggo out:
 
-[](https://i.imgur.com/SJxwWFg.jpg)
+![doggo](https://i.imgur.com/SJxwWFg.jpg)
