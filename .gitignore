@@ -1,0 +1,9 @@
+*.fdb_latexmk  
+*.log
+math-ia-fistDraft.pdf
+
+*.aux  
+*.fls
+*.out
+*.synctex.gz  
+*.toc
