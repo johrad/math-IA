@@ -10,9 +10,9 @@ def decay(amount):
     print(newAmount)
 
 
-while amount > 0.01:
+while amount > 0.001:
     amount = decay(amount)
-    round(amount,3)
+    round(amount,2)
     print(amount)
     
     table_data.append(amount)
@@ -20,4 +20,4 @@ while amount > 0.01:
 print("\nThe data consists of: {} entires.".format(len(table_data)))
 i=0 
 for i in range(0,len(table_data)):
-    print("{} & {} \\\\".format(i,str(table_data[i]))),
+    print("{} & {} \\\\".format(i,str(table_data[i])))

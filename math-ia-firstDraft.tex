@@ -82,32 +82,37 @@
         \paragraph{}
                 Much like radioactive elements in physics, caffeine follows the same pattern that alpha decay does, meaning that it has a half-life. A Half-life in the realm of nuclear physics is defined as time taken for the radioactive activity of an element to halve itself. So if we were to have a sample of the element Plutonium-238 has an initial activity of $1$ and a half life of 2 hours. Then if you then wait for 2 hours, the activity is now going to be {$\frac{1}{2}$}. I have therefore concluded to use computer simulations as my data collection, and since there are no available simulations specifically for caffeine I will collect data from a simple python program which will apply the principles of the half-life (Raw code is attached to the appendix). 
 
-                \noindent To obtain the half-life of caffeine a search of scholarly articles have been conducted. A study conducted by the American Society of Health-System Pharmacists has found that the half-life of caffeine lies varies between 3 to 5 hours in adults. This is subject to errors made by the original writer but for the sake of this exploration we will assume that his findings hold true. 
+                \noindent To obtain the half-life of caffeine a search of scholarly articles have been conducted. A study preformed by the American Society of Health-System Pharmacists has found that the half-life of caffeine lies varies between 3 to 5 hours in adults. 
+                %%%%%
+                %% Source: [American Society of Health-System Pharmacists 2013; Drug Information 2013. Bethesda, MD. 2013, p. 2569] 
+                %% https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/r?dbs+hsdb:@term+@rn+58-08-2
+                %%%%%
+                This is subject to errors made by the original writer but for the sake of this exploration we will assume that his findings hold true. 
                 
                 \noindent
-                Since the aim of this exploration is to determine how early before bed you can drink your last cup of coffee, we will take assume that the person drinking is at the lower echelon of caffeine decomposition, and caffeine wil therefore have a half-life of \textit{5 hours}. 
+                Since the aim of this exploration is  to determine how early before bed you can drink your last cup of coffee, we will take assume that the person drinking is at the lower echelon of caffeine decomposition, and caffeine wil therefore have a half-life of \textit{5 hours}. 
                 
                 \noindent the table bellow shows the simulation output. A note to the data is that the simulation will not calculate for values down to the absolute 0, but rather down do a 0 value of 0.01 (15 data points). This is due to the nature of Mathematics when continuously dividing. (the last output of the simulation before it returned 0.0 was $4.95\times 10^-324$)
 
                 % Inserting table
                 \begin{center}
                         \begin{tabular}{cc}
-                        Time (h) & mg of caffeine \\
-                        0 & 100.0 \\ 
-                        1 & 50.0 \\ 
-                        2 & 25.0 \\
-                        3 & 12.5 \\ 
-                        4 & 6.25 \\ 
-                        5 & 3.125 \\ 
-                        6 & 1.5625 \\
-                        7 & 0.78125 \\
-                        8 & 0.390625 \\
-                        9 & 0.1953125 \\ 
-                        10 & 0.09765625 \\ 
-                        11 & 0.048828125 \\ 
-                        12 & 0.0244140625 \\ 
-                        13 & 0.01220703125 \\
-                        14 & 0.006103515625 \\
+                        Time (h) & mg of caffeine       \\
+                        0 & 100.0\\ 
+                        1 & 50.0  \\ 
+                        2 & 25.0   \\
+                        3 & 12.5    \\ 
+                        4 & 6.25     \\ 
+                        5 & 3.13      \\ 
+                        6 & 1.56       \\
+                        7 & 0.781       \\
+                        8 & 0.391        \\
+                        9 & 0.195         \\ 
+                        10 & 0.0977        \\ 
+                        11 & 0.0488         \\ 
+                        12 & 0.0244          \\ 
+                        13 & 0.0122           \\
+                        14 & 0.00610           \\
                         
                                            
                         \end{tabular}
