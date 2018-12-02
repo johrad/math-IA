@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import matplotlib.ticker as ticker
+from scipy.optimize import curve_fit
 
 amount = 100.0
 table_data = []
@@ -35,8 +36,8 @@ print(table_sep)
 
 
 plt.plot(table_sep, table_data, 'rd')
-plt.ylabel('Time (t / h)')
-plt.xlabel('Caffeine left (mg)')
+plt.xlabel('Time (t / h)')
+plt.ylabel('Caffeine left (mg)')
 plt.axis([0, 50, 0.001, 110])
 
 ax = plt.axes()
