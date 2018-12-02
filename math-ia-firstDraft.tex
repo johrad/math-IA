@@ -5,7 +5,9 @@
 \usepackage{verbatim}   % useful for program listings
 \usepackage{color}      % use if color is used in text
 \usepackage{subfigure}  % use for side-by-side figures
-\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage{hyperref}   % use for hypertext links, including those to external 
+\usepackage{minted}
+\usepackage{listings}
 % \usepackage[showframe]{geometry} % remove gay indentation 
 % \usepackage{gensymb} % allows me to use fancy symbols in-text
 
@@ -98,7 +100,7 @@
                 \begin{center}
                         \begin{tabular}{cc}
                         Time (h) & mg of caffeine       \\
-                        0 & 100.0\\ 
+                        0 & 100  \\ 
                         1 & 50.0  \\ 
                         2 & 25.0   \\
                         3 & 12.5    \\ 
@@ -145,7 +147,68 @@
 
 
                 \noindent
-                By looking at our original equation we can see that it is possible to set it up as a \textit{differential equation} and solve for 
-        
+                By looking at our original equation we can see that it is possible to set it up as a \textit{differential equation} and integrate both sides, one integrating for $\delta N$ and one for $\delta t$
+                        $$\frac{1}{N} \delta N_\Theta  = -\lambda \delta t$$
+
+                        $$\int \frac{1}{N} \delta N_\Theta  = \int -\lambda \delta t$$
+                        $$ ln(N) + c_1 = -\lambda t + c_2 $$
+                        $$ ln(N)  = -\lambda t + c_3 $$
+                \noindent
+                We can the rearrange this to get $N$ as a function of $t$ by elevating the entire expression to the power of $e$:
+                
+                        $$ N(t) = e^{-\lambda t + c_3} $$
+
+                Which can be re-written as:
+
+                        $$ N(t) = e^{-\lambda t}e^{c_3} $$
+
+                Since $c_3$ is an arbitrary constant, we can relabel the expression $e^{c_3}$ as a new constant called $c_4$, which gives us:
+
+                        $$ N(t) = e^{-\lambda t}{c_4} $$
+
+                At $t=0$ the compound has yet had a chance to decay, so we can also say that $N(0) = N_\Theta$, solving for $c_4$ then gives:
+                
+                        $$ N(0) = e^{-\lambda 0}{c_4} $$
+                        $$ N(0) = 1 \times {c_4} $$
+                        $$N(0) = N_\Theta = c_4$$
+
+                We can then substitute that into ur function to get:   
+                        $$ N(t) = N_\Theta e^{-\lambda t} $$
+
+                %https://www.khanacademy.org/science/physics/quantum-physics/in-in-nuclei/v/exponential-decay-formula-proof-can-skip-involves-calculus
+
+                This formula is often known as the "Exponential decay formula", which seems to fit our model knowledge caffeine well.
+
+                \section{Our equation}
+                As derived in the section above, our model for the decay of caffeine will follow the exponential decay formula.
+
+                In our data, it is shown that the initial amount of caffeine is $100mg$ and that its half-life is $5 hours$. We can therefore sum up the values of our variables as follows,
+                         $$N_\Theta = 100mg$$
+                         $$N_1 = 50mg$$ 
+                        $$t = 5 \times 60 = 300min$$
+                        $$ \lambda = x$$
+                        
+               \noindent 
+               and solve for $\lambda$. We re-arrange our function before we plug in the appropriate values:
+                        $$ N(t) = N_\Theta e^{-\lambda t}$$
+                        $$ ln(N) = ln(N_\Theta) -\lambda t $$
+                        $$ \lambda = -\frac{ln(N)}{ln(N_\Theta)t}$$
+                
+                \noindent 
+                Then substituting the appropriate values gives us:
+                        $$\lambda = -\frac{ln(100)}{ln(50)\times 300} = -0.00392$$
+
+                It is now possible to graph our model of the decay of caffeine.
+                  
+                \section{The Model}
+
+                Here I'll make the best fit graph and determine when to drink coffee before bed etc
+
+                        
+                
+                \pagebreak
+                \section{Appendix}
+                \inputminted{python}{decay.py} %yes
+
 \end{document}
 
