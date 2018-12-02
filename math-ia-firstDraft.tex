@@ -23,115 +23,103 @@
 \setlength{\marginparwidth}{2.5cm}
 \setlength{\marginparpush}{1.0cm}
 \setlength{\textwidth}{150mm}
+\linespread{1.25}
 
 
-\begin{comment}
-\pagestyle{empty} % doesn't count for page numbers
-\end{comment}
-
-
+ \begin{comment}
+    \pagestyle{empty} % doesn't count for page numbers
+ \end{comment}
+        
+        
 \begin{document}
-
-    \title{A Mathematical Exploration of the Hover Slam Manuever}
-    \date{25.10.2018}
-    \author{Candiate code: hjk123}
-    \begin{titlepage}
-        \begin{center}
-            % \small{Mathematics SL, IA:} \\
-            \Huge{A Mathematical Exploration of the \\ Hover Slam Manuever}
-            \break
-            {\large A Mathematics Internal Assessment}
-            \break
-            %\small{Written by Johan-Petter R. Dragic}
-           % \date{06.11.2018}
+        
+        \author{Candiate code: hjk123}            \begin{titlepage}
+                \begin{center}
+                  % \small{Mathematics SL, IA:} \\
+                \Huge{A Mathematical Exploration of the \\ Decay of Caffeine}
+                \break
+                {\large A Mathematics Internal Assessment}
+                \break                    %\small{Written by Johan-Petter R. Dragic}
+                 % \date{06.11.2018}
+                    
+        
+                    % ADD BREAK HERE
+                \vspace{12mm}
+                \includegraphics[scale=0.38]{coffee1.jpg}
+                % source pic:http://www.mobileswall.com/wallpaper/coffee-beans-in-a-coffee-cup-free/            
+    
+            \end{center}
+                    \end{titlepage}
+        
+            \tableofcontents
+            \thispagestyle{empty}
+            \addtocounter{page}{-1}
             
+        %     Structure:
+        %             1. Introduction
+        %                 purpose and aim, personal engagement
+        %             2. Collection of data
+        %                 Experimental methods
+                                % Simulation
 
-                % ADD BREAK HERE
-            \vspace{12mm}
-            \includegraphics[scale=0.18]{hoverslam2.jpg}
-            % source pic2: https://gisgeography.com/polar-orbit-sun-synchronous-orbit/
-            
 
-        \end{center}
-    \end{titlepage}
 
-    \tableofcontents
-    \thispagestyle{empty}
-    \addtocounter{page}{-1}
-    
-    % USE THIS: https://www.reddit.com/r/spacex/comments/4jeerf/mathematical_analysis_of_a_singleengine_hoverslam/
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%    START OF DOCUMENT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-    \newpage
-    \section{Introduction} % and personal engagement
-    \paragraph{}
-        %%%%
-        % Work more on the opening paragraph
-        %%%%
-        On December 21st, 2015. SpaceX, the privately owned space company, successfully landed the booster stage (Also referred to as the first stage) of the \textit{Falcon 9} back at their launch site in Cape Canaveral, Florida.
-        This is considered by some to be the next major advancement towards making humans an interplanetary species. Elon Musk, the founder and CEO of the company 
-        intends to achieve "plane-like" levels of rapid reusability of rockets, in hopes that this will help propel humans towards Mars. 
-    \\
-        SpaceX has since then, successfully landed their first stage rocket boosters a total of \textbf{XX} times, both at land and on a barrage in the ocean. 
-    \\ 
-        I still vividly remember the moment my heart skipped a beat as the rocket landed, and my previous passion for spaceflight was reignited.
-    \paragraph{\noindent}
-        With my passion at it's peak I began playing the video game "Kerbal Space Program", a game described as a "Spaceflight sandbox". In the game, you design your own rockets and 
-        control their maneuvering as you like. After watching the Falcon 9 land I started recrating the rocket in the game. 
-        I then quickly realized how complicated it was to preform a propulsive landing of its first stage. The complexity of the landing intrigued me. 
-        And as I eventually learned how to adjust the timing and thrust of the engines I figured it would be easier to create a script that will do this for me, much like this is done in real life.
-    \break
-        One of the hardships I encountered was to figure out how to determine when I was going to fire my engines to perform this so-called "hover slam" manuever 
-        (also called the "suicide burn").
-    \paragraph{\noindent}
-        I therefore decided to dedicated my Mathematics IA to exploring this topic and figuring out how to achieve a perfect and autonomous landing.
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%    START OF DOCUMENT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+            \newpage
+            \section{Introduction} % and personal engagement
+            \paragraph{}
+                Coffee has become an integral part of many lives, including mine. It's what wakes you up in the morning and sustains your energy-levels throughout the day. The leading chemical stimulant in coffee is called caffeine and it's classified as a "Psychoactive drug", meaning that it alters the chemical processes that goes on in your brain. The main effect of caffeine is to alter the brain's perception of when it's tired, and is the reason why I and many others admire this mild drug. And since the world average amount of sleep lies bellow the hourly optimum, it is no wonder why caffeine consumed to such extents as it is today.
+                \\
+                Due to the psychoactive effects of caffeine on tiredness many advice to not drink caffeine-containing beverages 3 hours before bed, but how did they come to this conclusion?
+                
 
-    
 
-    \section{Background theory}
-        \subsection{The manuever}
+                \noindent The purpose of this math IA is therefore to explore the decay of caffeine with the aim of figuring out how early before bed you can dink your last cup of coffee without it affecting your sleep.
+
+
+
+        \section{Data collection}
         \paragraph{}
-        Before one can begin to explore the mathematics behind the manuever, it is important to understand what a hover slam is.
-        The Manuever can be broken down into \textbf{3} phases: 
-            
+                Much like radioactive elements in physics, caffeine follows the same pattern that alpha decay does, meaning that it has a half-life. A Half-life in the realm of nuclear physics is defined as time taken for the radioactive activity of an element to halve itself. So if we were to have a sample of the element Plutonium-238 has an initial activity of $1$ and a half life of 2 hours. Then if you then wait for 2 hours, the activity is now going to be {$\frac{1}{2}$}. I have therefore concluded to use computer simulations as my data collection, and since there are no available simulations specifically for caffeine I will collect data from a simple python program which will apply the principles of the half-life (Raw code is attached to the appendix). 
 
-    \noindent{\textbf{Step 1: The Pre-Entry Phase}}
+                \noindent To obtain the half-life of caffeine a search of scholarly articles have been conducted. A study preformed by the American Society of Health-System Pharmacists has found that the half-life of caffeine lies varies between 3 to 5 hours in adults. 
+                %%%%%
+                %% Source: [American Society of Health-System Pharmacists 2013; Drug Information 2013. Bethesda, MD. 2013, p. 2569] 
+                %% https://toxnet.nlm.nih.gov/cgi-bin/sis/search2/r?dbs+hsdb:@term+@rn+58-08-2
+                %%%%%
+                This is subject to errors made by the original writer but for the sake of this exploration we will assume that his findings hold true. 
+                
+                \noindent
+                Since the aim of this exploration is  to determine how early before bed you can drink your last cup of coffee, we will take assume that the person drinking is at the lower echelon of caffeine decomposition, and caffeine wil therefore have a half-life of \textit{5 hours}. 
+                
+                \noindent the table bellow shows the simulation output. A note to the data is that the simulation will not calculate for values down to the absolute 0, but rather down do a 0 value of 0.01 (15 data points). This is due to the nature of Mathematics when continuously dividing. (the last output of the simulation before it returned 0.0 was $4.95\times 10^-324$)
 
+                % Inserting table
+                \begin{center}
+                        \begin{tabular}{cc}
+                        Time (h) & mg of caffeine       \\
+                        0 & 100.0\\ 
+                        1 & 50.0  \\ 
+                        2 & 25.0   \\
+                        3 & 12.5    \\ 
+                        4 & 6.25     \\ 
+                        5 & 3.13      \\ 
+                        6 & 1.56       \\
+                        7 & 0.781       \\
+                        8 & 0.391        \\
+                        9 & 0.195         \\ 
+                        10 & 0.0977        \\ 
+                        11 & 0.0488         \\ 
+                        12 & 0.0244          \\ 
+                        13 & 0.0122           \\
+                        14 & 0.00610           \\
+                        
+                                           
+                        \end{tabular}
+                        
+                \end{center}
+                
 
-    This is the phase before the spacecraft enters the denser part of the atmosphere. What happens in this phase is the orientation, boost-back burn, and the entry-burn
-    The purpose of this stage is to prepare the booster for immense mechanical stress of entering the atmosphere at high speeds, and to align it's ballistic trajectory towards its desired landing location
-    In most cases, this require a "boost-back" burn, where the rocket turns its trajectory 180{$^\circ $} and heads back to the launch site. 
-    After the boost-back burn is complete the rocket re-orients itself to the retrograde position and fires it's engines right before hitting the denser part of the atmosphere. This is done to slow it down enough so that it will be able to survive the heavy the external forces caused by the atmosphere.
-    
-    \noindent See Figure 1.1 for a visual representation.
-    
-    % sexy image commence:
-    \begin{center}
-
-        \includegraphics[scale=0.5]{Trajectory-landing.png}
-    \end{center}
-
-
-    \paragraph{\noindent}
-    It is to be noted that when landing on a barrage at sea, a significantly smaller boost-back burn is required. Though, the scope of this exploration will not focus on this stage and assume that a rocket, is leaving this stage with a set mass, {$m_\circ$}, and velocity, {$U_\circ$}.
-
-    
-    \noindent{\textbf{Step 2: The Entry Phase}}
-
-    In this phase, the rocket tries to navigate through the atmosphere through the use of its extendable "Grid fins" % (seen in Figure 1.2). 
-    What is critical here is to note that the rocket gets drastically slowed down by by the gradually denser air as it enters the atmosphere.
-    
-
-
-    % \includegraphics[scale=0.5]{grid-fins.jpg}
-
-    \noindent{\textbf{Step 3: The Landing Phase}}
-    The hover slam is a term for a Manuever in which the spacecraft awaits the retro-grade firing to slow it self down so that a landing with an intact spacecraft can take place of its 
-
-    The more slang-like term of the hover slam: the "suicide burn" explains the consequence that occurs if the manuever was not completed successfully,
-    
-
-    
-
+        
 \end{document}
 
