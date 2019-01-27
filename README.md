@@ -1,4 +1,4 @@
-<h2> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Norwegian-road-sign-565.png" alt="drawing" width="55"/>  Moved to [ibo_ia repository](https://github.com/johrad/ibo_ia) <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Norwegian-road-sign-565.png" alt="drawing" width="55"/></h2> 
+<h2> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Norwegian-road-sign-565.png" alt="drawing" width="55"/>  Moved to <a href="https://github.com/johrad/ibo_ia">ibo_ia repository  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Norwegian-road-sign-565.png" alt="drawing" width="55"/></h2> 
  
 
 ### Mathematics IA - LaTeX
